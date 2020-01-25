@@ -1,5 +1,9 @@
 body {
   margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #114b5f;
+  color: white;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -10,4 +14,47 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* Player Cards */
+.playerContainer {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: space-between;
+}
+
+.cardsTwo {
+  background-color: red;
+}
+
+.player-cards {
+  width: 280px;
+  margin: 2% 0;
+  padding: 3% 0;
+  background-color: #1a936f;
+  cursor: pointer;
+}
+
+.player-cards:hover {
+  background-color: #1a936fa1;
+}
+
+/* ToggleTheme */
+
+.themeChange {
+  background-color: #88D498;
+}
+
+.themeBtn {
+  width: 15%;
+  padding: 2px 0;
+  background-color: black;
+  cursor: pointer;
+}
+
+.lightBtn {
+  background-color: #F3E9D2;
+  color: black
 }

@@ -1,24 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Players from './components/Players';
+import { useDarkMode } from './hooks/useDarkMode';
 
 function App() {
+  const [darkMode, setDarkMode] = useDarkMode(false);
+
+  const toggleTheme = e => {
+    e.preventDefault();
+    setDarkMode(!darkMode);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div data-testid='changeTheme' className={darkMode ? 'themeBtn lightBtn' : 'themeBtn'} onClick={toggleTheme}>Toggle Theme</div>
+      <header data-testid='pageTitle' className='header'>
+        <h1>Women's World Cup</h1>
+        <h2>Most Searched Athletes</h2>
       </header>
+      <Players />
     </div>
   );
 }
